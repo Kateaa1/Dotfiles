@@ -66,7 +66,7 @@ input {
 // Remember to uncomment the node by removing "/-"!
     output "eDP-1" {
     // Uncomment this line to disable this output.
-    off
+     off
 
     // Resolution and, optionally, refresh rate of the output.
     // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
@@ -77,7 +77,7 @@ input {
     mode "1920x1080@120.030"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    scale 1.5
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -92,15 +92,15 @@ input {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=1280 y=0
-}
+     position x=0 y=0
+ }
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 17
+    gaps 10
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -156,10 +156,10 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#9adbef"
+        active-color "#bb6861"
 
         // Color of the ring on inactive monitors.
-        inactive-color "#505050"
+        inactive-color "#000000"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -199,10 +199,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
+         left 3
+         right 3
+         top 3
+         bottom 3
     }
 }
 
@@ -219,12 +219,12 @@ layout {
 	spawn-at-startup "xwayland-satellite"
 	spawn-at-startup "waybar"
 	// spawn-at-startup "kitty"
-	spawn-at-startup "env DISPLAY=:0 Discord"
+	//spawn-at-startup "env DISPLAY=:0 Discord"
  
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
-// This option will also fix border/focus ring drawing behind some semitransparent windows.
+// This optionwill also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
    prefer-no-csd
 
@@ -290,7 +290,7 @@ window-rule {
 }
 
 window-rule {
-	geometry-corner-radius 6
+	geometry-corner-radius 7
 	clip-to-geometry true
 }
 
@@ -327,8 +327,6 @@ binds {
     Mod+Shift+Q { close-window; }
 
     Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-down; }
-    Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
@@ -382,8 +380,8 @@ binds {
     // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
     // ...
 
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
+    Mod+Down           { focus-workspace-down; }
+    Mod+Up             { focus-workspace-up; }
     Mod+U              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
@@ -479,8 +477,8 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+A { maximize-column; }
+    Mod+Shift+A { fullscreen-window; }
     Mod+C { center-column; }
 
     // Finer width adjustments.
