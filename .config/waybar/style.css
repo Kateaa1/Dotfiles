@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Comfortaa, 'Font Awesome 6 Free';
-    font-size: 16px;
+    font-family: 'VCR OSD Mono', 'Font Awesome 6 Free';
+    font-size: 17px;
     font-feature-settings: "tnum";
 }
 
 window#waybar {
-    background: transparent;
+    background: #000000;
     /* background-color: rgba(30, 30, 46, 0.5); */
     /* border-bottom: 2px solid rgba(147, 153, 178, 0.5); */
     /* border: 1px solid rgba(166, 173, 200, 1.0); */
@@ -96,10 +96,11 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
+    margin: 4px;
     padding: 0 10px;
-    color: #f0f0ff;
-    background-color: rgba(30, 30, 46, 0.6);
-    border-radius: 10px;
+    color: #d99ea4;
+    background-color: #404899;
+    border-radius: 4px;
 }
 
 #window,
@@ -108,7 +109,8 @@ button:hover {
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left > wi
+dget:first-child > #workspaces {
     margin-left: 0;
 }
 
@@ -119,7 +121,6 @@ button:hover {
 
 #clock {
     /* background-color: #64727D; */
-    font-weight: bold;
     /* background-color: rgba(0, 0, 0, 0.3); */
     /* border-radius: 99px; */
 }
@@ -202,15 +203,15 @@ label:focus {
 }
 
 #taskbar button:first-child {
-    border-radius: 99px 0 0 99px;
+    border-radius: 4px;
 }
 
 #taskbar button:last-child {
-    border-radius: 0 99px 99px 0;
+    border-radius: 0px;
 }
 
 #taskbar button:first-child:last-child {
-    border-radius: 99px;
+    border-radius: 0px;
 }
 
 #taskbar button:hover {
@@ -236,6 +237,7 @@ pulseaudio {
 }
 
 #wireplumber {
+    margin: 4px;
     background-color: #fff0f5;
     color: #000000;
 }
