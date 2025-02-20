@@ -13,7 +13,7 @@
     // Choose the order of the modules
     "modules-left": ["clock"],
     "modules-center": ["wlr/taskbar"],
-    "modules-right": ["network", "battery", "pulseaudio"],
+    "modules-right": ["pulseaudio","network", "battery"],
     // "modules-right": ["cpu", "memory", "battery", "network", "tray"],
     // Modules configuration
     // "sway/workspaces": {
@@ -104,7 +104,7 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%e %B %I:%M}"
+        "format": "{:%e-%b %I:%M%p}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -184,3 +184,4 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
+
