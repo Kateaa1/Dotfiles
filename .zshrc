@@ -105,4 +105,4 @@ source $ZSH/oh-my-zsh.sh
 
 fastfetch
 
-swww img /home/kate/Pictures/all/rain.jpg
+swww img /home/kate/Pictures/wallpapers/rain.jpg
