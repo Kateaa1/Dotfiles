@@ -1,0 +1,13 @@
+default-timeout=5000
+
+font=comfortaa
+
+background-color=#0e253a
+
+text-color=#7fd4f9
+
+border-size=2
+
+border-color=#7fd4f9
+
+border-radius=8
