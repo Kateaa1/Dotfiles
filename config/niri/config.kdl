@@ -378,7 +378,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+Alt+J {spawn "firefox";}
     Mod+Alt+K {spawn "nautilus" "--new-window";}
-    Mod+Alt+D {spawn "discord";}
+    Mod+Alt+D {spawn "Discord";}
     Mod+Alt+H {spawn "flatpak" "run" "dev.zed.Zed";}
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
