@@ -5,6 +5,7 @@ No fancy install script or anything just copy the files to your ~/.config
 
 ###
 Dependencies:
+
     * Font Awesome
     * Space Mono
     * niri
