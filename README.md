@@ -3,6 +3,19 @@
 What it says on the tin
 No fancy install script or anything just copy the files to your ~/.config
 
+###
+Dependencies:
+
+    * Font Awesome
+    * Space Mono
+    * niri
+    * waybar
+    * tofi/fuzzel
+    * swaybg
+    * mako
+    * swaylock
+    * alacritty
+
 ### Screenshots
 
 <img width="2560" height="1440" alt="Screenshot from 2026-03-08 21-37-33" src="https://github.com/user-attachments/assets/e76466c1-e2ac-4978-affe-df18e44289cb" />
