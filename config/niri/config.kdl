@@ -117,7 +117,7 @@ output "HDMI-A-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 12
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -378,7 +378,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+Alt+J {spawn "firefox";}
     Mod+Alt+K {spawn "nautilus" "--new-window";}
-    Mod+Alt+L {spawn "discord";}
+    Mod+Alt+D {spawn "discord";}
     Mod+Alt+H {spawn "flatpak" "run" "dev.zed.Zed";}
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -571,8 +571,8 @@ binds {
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Super+W { maximize-column; }
+    Mod+Shift+W { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
