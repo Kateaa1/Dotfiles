@@ -352,9 +352,13 @@ window-rule {
     clip-to-geometry true
 }
 
+//window-rule {
+//	match app-id="Alacritty"
+//	open-maximized true
+//}
 window-rule {
-	match app-id="Alacritty"
-	open-maximized true
+	match app-id="Steam"
+	open-floating true
 }
 
 binds {
