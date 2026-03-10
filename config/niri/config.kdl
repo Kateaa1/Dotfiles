@@ -333,7 +333,7 @@ window-rule {
     open-floating true
 }
 
-// Example: block out two password managers from screen capture.
+//https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
@@ -640,4 +640,5 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+    Super+Shift+H { spawn-sh "swaylock & systemctl suspend"; }
 }
