@@ -10,9 +10,6 @@
     "shell",
     "de",
     "wm",
-    "wmtheme",
-    "theme",
-    "icons",
     "font",
     "cursor",
     "terminal",
@@ -21,7 +18,6 @@
     "memory",
     "swap",
     "disk",
-    "locale",
     "break",
     "colors",
     "break"

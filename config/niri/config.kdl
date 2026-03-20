@@ -9,6 +9,8 @@
 input {
     keyboard {
         xkb {
+            options "caps:swapescape"
+
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
 
@@ -23,7 +25,7 @@ input {
 
         // Enable numlock on startup, omitting this setting disables it.
         numlock
-    }
+           }
 
     // Next sections include libinput settings.
     // Omitting settings disables them, or leaves them at their default values.
@@ -31,7 +33,7 @@ input {
     touchpad {
         // off
         tap
-        // dwt
+        dwt
         // dwtp
         // drag false
         // drag-lock
@@ -117,7 +119,7 @@ output "HDMI-A-1" {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 12
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -203,7 +205,7 @@ layout {
         //off
 
         width 2
-        active-color "#7fc8ff"
+        active-color "#a4ff7f"
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -348,7 +350,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
@@ -382,7 +384,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+Alt+J {spawn "firefox";}
     Mod+Alt+K {spawn "nautilus" "--new-window";}
-    Mod+Alt+D {spawn "Discord";}
+    Mod+Alt+D {spawn "discord";}
     Mod+Alt+H {spawn "flatpak" "run" "dev.zed.Zed";}
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -395,7 +397,7 @@ binds {
     // Using spawn-sh allows to pass multiple arguments together with the command.
     // "-l 1.0" limits the volume to 100%.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "--limit" "1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
@@ -641,4 +643,9 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
     Mod+Shift+S { spawn-sh "swaylock & systemctl suspend"; }
+}
+
+cursor {
+	xcursor-theme "Adwaita"
+	xcursor-size 24
 }
