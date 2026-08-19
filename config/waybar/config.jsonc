@@ -105,9 +105,8 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%H:%M}",
-	"format": "{:%a %d/%m/%Y %H:%M}"
+        "format-alt": "{:%a %d/%m/%Y %H:%M}",
+	"format": "{:%H:%M}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -171,8 +170,8 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": "0%  {icon} {format_source}",
+        "format-muted": "0% ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",

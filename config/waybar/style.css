@@ -1,18 +1,21 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Space Mono;
-    font-size: 15px;
+    font-family: FontAwesome, Hack;
+    font-size: 14px;
 }
 
 window#waybar {
-    background-color: #2f2f2f;
+    /* Use an alpha channel on the background instead of `opacity`,
+       so only the background is transparent and the text/icons
+       stay fully opaque. */
+    background-color: rgba(47, 47, 47, 0.8);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+    background-color: rgba(47, 47, 47, 0.2);
 }
 
 /*
@@ -114,12 +117,12 @@ button:hover {
 }
 
 #clock {
-    background-color: #2f2f2f;
+    background-color: transparent;
     color: #ffffff;
 }
 
 #battery {
-    background-color: #2f2f2f;
+    background-color: transparent;
     color: #ffffff;
 }
 
@@ -130,14 +133,12 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        color: #f53c3c;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -170,7 +171,7 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2f2f2f;
+    background-color: transparent;
     color: #ffffff;
 }
 
@@ -187,7 +188,7 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: transparent;
 }
 
 #network.disconnected {
@@ -195,7 +196,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #2f2f2f;
+    background-color: transparent;
     color: #ffffff;
 }
 
@@ -205,13 +206,12 @@ label:focus {
 }
 
 #wireplumber {
-    background-color: #2f2f2f;
+    background-color: transparent;
     color: #ffffff;
 }
 
 #wireplumber.muted {
-    background-color: #ff0000;
-    color: #ffffff
+    color: #ff0000;
 }
 
 #custom-media {
@@ -237,7 +237,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2f2f2f;
+    background-color: transparent;
 }
 
 #tray > .passive {
@@ -332,6 +332,6 @@ label:focus {
      color: #ffffff;
 }
 #network {
-	background-color: #2f2f2f;
+	background-color: transparent;
 	color: #ffffff;
 }
